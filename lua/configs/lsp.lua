@@ -1,3 +1,9 @@
+vim.pack.add(
+    {
+        'https://github.com/saghen/blink.cmp',
+        "https://github.com/neovim/nvim-lspconfig"
+    }
+)
 local has_blink, blink = pcall(require, 'blink.cmp')
 local capabilities = has_blink and blink.get_lsp_capabilities() or vim.lsp.protocol.make_client_capabilities()
 local vue_plugin_path = '/usr/lib/node_modules/@vue/language-server/node_modules/@vue/typescript-plugin'
