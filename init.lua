@@ -8,25 +8,37 @@ local opt = vim.opt
 opt.undofile = true
 opt.list = true
 
--- General UX
+opt.ignorecase = true
+opt.smartcase = true
+
 opt.showmode = false
+
 opt.number = true
 opt.relativenumber = true
+
 opt.splitright = true
 opt.splitbelow = true
+
 opt.mouse = 'a'
 opt.termguicolors = true
 opt.signcolumn = "yes"
+
 vim.schedule(function()
   opt.clipboard = 'unnamedplus'
 end)
+
 opt.cursorline = true
 opt.scrolloff = 10
+
 opt.confirm = true
+
 opt.shiftwidth = 4
 opt.expandtab = true
+
 opt.hlsearch = false
+
 opt.timeoutlen = 50
+opt.updatetime = 50
 
 require('configs.lsp')
 -- vim: ts=2 sts=2 sw=2 et
