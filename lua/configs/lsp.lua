@@ -80,7 +80,16 @@ local configs = {
                 },
             },
         },
-    }
+    },
+    tinymist = {
+        cmd = { 'tinymist' },
+        filetypes = { 'typst' },
+        root_markers = { '.git', 'package.json' },
+        settings = {
+            exportPdf = "onSave",
+            semanticTokens = "enable",
+        },
+    },
 }
 
 for name, config in pairs(configs) do
